@@ -32,3 +32,14 @@ console.log(
         day: "numeric",
     }).format(fourthOfJulyTime),
 );
+
+// add or subtract time
+const nextWeek = myDateWithTime.add({ weeks: 1 });
+console.log("Next week:", nextWeek.toString());
+const twoDaysAgo = myDateWithTime.subtract({ days: 2 });
+console.log("2 days ago:", twoDaysAgo.toString());
+const oneAndAHalfHoursAgo = myDateWithTime.subtract({
+    hours: 1,
+    minutes: 30,
+});
+console.log("1.5 hrs ago:", oneAndAHalfHoursAgo.toString());
