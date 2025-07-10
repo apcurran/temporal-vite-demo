@@ -22,3 +22,13 @@ const tokyoTimeWholeHour = tokyoTime.round({
     roundingMode: "floor",
 }); // rounding down to previous whole hour
 console.log(tokyoTimeWholeHour.toString());
+
+// works with Intl API
+const fourthOfJulyTime = Temporal.PlainDate.from("2025-07-04");
+console.log(
+    Intl.DateTimeFormat("en-US", {
+        weekday: "long",
+        month: "long",
+        day: "numeric",
+    }).format(fourthOfJulyTime),
+);
