@@ -15,3 +15,10 @@ console.log(nyTime.toString());
 // convert current NY time to Tokyo time
 const tokyoTime = nyTime.withTimeZone("Asia/Tokyo");
 console.log(tokyoTime.toString());
+
+// round times
+const tokyoTimeWholeHour = tokyoTime.round({
+    smallestUnit: "hour",
+    roundingMode: "floor",
+}); // rounding down to previous whole hour
+console.log(tokyoTimeWholeHour.toString());
